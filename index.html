@@ -3,78 +3,67 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>تسجيل الدخول - MiniCute</title>
+  <title>MiniCute - تسجيل الدخول</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #fdd9a0, #d5b0ff);
+      font-family: 'Cairo', sans-serif;
+      background-color: #7e57c2;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
       height: 100vh;
-    }
-    .container {
-      background: white;
-      padding: 40px 30px;
-      border-radius: 30px;
-      box-shadow: 0px 4px 25px rgba(0,0,0,0.1);
-      width: 320px;
-      text-align: center;
+      color: white;
     }
     .logo {
-      width: 100px;
       margin-bottom: 20px;
+      width: 120px;
     }
-    h2 {
-      color: #4a2b6b;
-      margin-bottom: 20px;
+    .title {
+      font-size: 28px;
+      margin-bottom: 10px;
     }
-    input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 12px;
-      border: 1px solid #ccc;
+    .subtitle {
+      font-size: 16px;
+      margin-bottom: 30px;
+      color: #f0e6ff;
     }
     .button {
-      width: 100%;
-      background-color: #ff9900;
-      color: white;
-      border: none;
+      width: 280px;
+      background-color: white;
+      color: #7e57c2;
+      border: 1px solid #ddd;
       padding: 12px;
       border-radius: 12px;
-      margin-top: 15px;
-      cursor: pointer;
+      margin-bottom: 15px;
       font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
     }
     .button:hover {
-      background-color: #e08900;
+      background-color: #f3f0fa;
     }
-    .role-buttons a {
-      display: block;
-      background-color: #6a1b9a;
-      color: white;
-      padding: 10px;
-      margin-top: 10px;
-      text-decoration: none;
-      border-radius: 10px;
+    .container {
+      text-align: center;
+    }
+    .illustration {
+      width: 260px;
+      margin-bottom: 30px;
+      border-radius: 16px;
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <img src="illustration.png" alt="MiniCute Girl Car" class="illustration">
     <img src="logo.png" alt="MiniCute Logo" class="logo">
-    <h2>تسجيل الدخول</h2>
-    <input type="email" placeholder="البريد الإلكتروني">
-    <input type="password" placeholder="كلمة المرور">
-    <button class="button" onclick="window.location.href='home.html'">دخول</button>
-    <div class="role-buttons">
-      <a href="rider_login.html">تسجيل كـ راكب</a>
-      <a href="driver_login.html">تسجيل كـ سائق</a>
-      <a href="signup.html">إنشاء حساب جديد</a>
-    </div>
+    <div class="title">أهلاً بك في MiniCute</div>
+    <div class="subtitle">اختر نوع الدخول:</div>
+    <button class="button" onclick="window.location.href='rider_login.html'">الدخول كـ راكب</button>
+    <button class="button" onclick="window.location.href='driver_login.html'">الدخول كـ سائق</button>
   </div>
 </body>
 </html>
