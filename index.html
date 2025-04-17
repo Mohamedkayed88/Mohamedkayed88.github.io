@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniCute - الرئيسية</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function redirectToDashboard() {
+      const userType = document.getElementById('user-type-login').value;
+      if (userType === 'driver') {
+        window.location.href = '/driver-dashboard.html';
+      } else {
+        window.location.href = '/passenger-dashboard.html';
+      }
+    }
+  </script>
+</head>
+<body class="bg-gradient-to-br from-orange-200 to-purple-200 min-h-screen font-sans">
+  <header class="bg-white shadow-md p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-orange-600">MiniCute</h1>
+    <nav>
+      <ul class="flex gap-4 text-sm text-gray-700">
+        <li><a href="#" class="hover:text-orange-500">الرئيسية</a></li>
+        <li><a href="#features" class="hover:text-orange-500">المميزات</a></li>
+        <li><a href="#download" class="hover:text-orange-500">تحميل التطبيق</a></li>
+        <li><a href="#signup" class="hover:text-orange-500">حساب جديد</a></li>
+        <li><a href="#login" class="hover:text-orange-500">تسجيل الدخول</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="text-center py-20 px-4">
+    <h2 class="text-4xl font-bold text-purple-700 mb-4">رحلتك تبدأ مع MiniCute</h2>
+    <p class="text-gray-700 mb-6">تطبيق شبابي ذكي يوصلك لأي مكان بسهولة وأمان.</p>
+    <a href="#download" class="bg-orange-500 text-white py-2 px-6 rounded-full hover:bg-orange-600 transition">حمّل التطبيق الآن</a>
+  </section>
+
+  <section id="features" class="bg-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-2xl font-bold mb-6 text-purple-800">مميزات MiniCute</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-orange-50 p-4 rounded-xl shadow-sm">
+          <h4 class="text-lg font-semibold mb-2">سهولة الاستخدام</h4>
+          <p class="text-sm text-gray-600">واجهة بسيطة وسريعة لأي مستخدم.</p>
+        </div>
+        <div class="bg-orange-50 p-4 rounded-xl shadow-sm">
+          <h4 class="text-lg font-semibold mb-2">أسعار مناسبة</h4>
+          <p class="text-sm text-gray-600">خدمة بأسعار اقتصادية تناسب الجميع.</p>
+        </div>
+        <div class="bg-orange-50 p-4 rounded-xl shadow-sm">
+          <h4 class="text-lg font-semibold mb-2">دعم متواصل</h4>
+          <p class="text-sm text-gray-600">فريق دعم جاهز لمساعدتك في أي وقت.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="signup" class="py-16 px-4 bg-purple-50">
+    <div class="max-w-md mx-auto">
+      <h3 class="text-2xl font-bold text-purple-800 text-center mb-6">إنشاء حساب جديد</h3>
+      <form class="space-y-4">
+        <input type="text" placeholder="الاسم الكامل" class="w-full border p-2 rounded">
+        <input type="tel" placeholder="رقم الهاتف" class="w-full border p-2 rounded">
+        <input type="email" placeholder="البريد الإلكتروني" class="w-full border p-2 rounded">
+        <input type="password" placeholder="كلمة المرور" class="w-full border p-2 rounded">
+        <select class="w-full border p-2 rounded">
+          <option value="passenger">عميل</option>
+          <option value="driver">سائق</option>
+        </select>
+        <button class="bg-orange-500 text-white py-2 w-full rounded hover:bg-orange-600">إنشاء حساب</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="login" class="py-16 px-4">
+    <div class="max-w-md mx-auto">
+      <h3 class="text-2xl font-bold text-purple-800 text-center mb-6">تسجيل الدخول</h3>
+      <form class="space-y-4" onsubmit="event.preventDefault(); redirectToDashboard();">
+        <input type="text" placeholder="رقم الهاتف أو البريد الإلكتروني" class="w-full border p-2 rounded">
+        <input type="password" placeholder="كلمة المرور" class="w-full border p-2 rounded">
+        <select id="user-type-login" class="w-full border p-2 rounded">
+          <option value="passenger">عميل</option>
+          <option value="driver">سائق</option>
+        </select>
+        <button type="submit" class="bg-orange-500 text-white py-2 w-full rounded hover:bg-orange-600">دخول</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="download" class="text-center py-16 px-4">
+    <h3 class="text-2xl font-bold text-purple-800 mb-4">تحميل التطبيق</h3>
+    <p class="mb-6 text-gray-700">متوفر قريباً على Google Play و Apple Store</p>
+    <div class="flex justify-center gap-4">
+      <button class="bg-black text-white py-2 px-4 rounded">Google Play</button>
+      <button class="bg-black text-white py-2 px-4 rounded">Apple Store</button>
+    </div>
+  </section>
+
+  <footer id="contact" class="bg-white text-center py-6 text-sm text-gray-600">
+    تواصل معنا: minicute@app.com | جميع الحقوق محفوظة © 2025
+  </footer>
+</body>
+</html>
